@@ -52,7 +52,7 @@ function render(){
  const ps=products(),count=document.getElementById('productCount');if(count)count.textContent=ps.length+' PRODUCTS';
  const cat=document.getElementById('catalog'),target=document.getElementById('products');
  if(cat){
-  if(!window.activeCatalog||activeCatalog==='all'){
+  if(activeCatalog==='all'){
    cat.innerHTML='<div class="category-grid"><button class="category-card" onclick="showCatalog(\'designed\')"><div class="category-collage">'+collage('designed')+'</div><div class="category-info"><h3>Designed Caps</h3><p>Explore our ready-made designs across six cap styles.</p></div></button><button class="category-card" onclick="showCatalog(\'plain\')"><div class="category-collage">'+collage('plain')+'</div><div class="category-info"><h3>Plain Caps</h3><p>Choose a blank cap and make it yours.</p></div></button><button class="category-card" style="grid-column:1/-1" onclick="openCustomizer()"><div class="category-info"><h3>Customize Your Cap ↗</h3><p>Pick a design, choose your cap and select how it is applied.</p></div></button></div>';
    if(target)target.innerHTML='';
   }else{
